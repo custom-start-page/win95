@@ -1,0 +1,3 @@
+# Windows 95 Inspired Start Page
+
+This is a very simple start page designed to emulate the look and feel of Windows 95. It is the start page I use personally, and as such the links are set up to my preference, however they can be easily modified via the 'folderData.js' file. I wrote this over a relatively short time span - focusing more on functionality than elagance of code, as such the code could likely be better organised and optimised - but it does what it needs to do. 
