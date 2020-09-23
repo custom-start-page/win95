@@ -1,0 +1,155 @@
+{
+    "linkGroups": [
+        {
+            "name": "University",
+            "icon": "book.png",
+            "links": [
+                {
+                    "name": "SurreyLearn",
+                    "icon": "folder.png",
+                    "url": "https://surreylearn.surrey.ac.uk"
+                },
+                {
+                    "name": "Surrey",
+                    "icon": "folder.png",
+                    "url": "https://surrey.ac.uk"
+                },
+                {
+                    "name": "Surrey365",
+                    "icon": "folder.png",
+                    "url": "https://surrey365.surrey.ac.uk"
+                },
+                {
+                    "name": "Library ",
+                    "icon": "folder.png",
+                    "url": "https://library.surrey.ac.uk"
+                },
+                {
+                    "name": "Timetable ",
+                    "icon": "folder.png",
+                    "url": "https://timetable.surrey.ac.uk"
+                },
+                {
+                    "name": "Print ",
+                    "icon": "folder.png",
+                    "url": "https://surrey.ac.uk/printcredits"
+                },
+                {
+                    "name": "Electronic Engineering",
+                    "icon": "folder.png",
+                    "url": "https://www.surrey.ac.uk/undergraduate/electronic-engineering/"
+                }
+            ]
+        },
+        {
+            "name": "Productivity ",
+            "icon": "desk.png",
+            "links": [
+                {
+                    "name": "DuckDuckGo ",
+                    "icon": "folder.png",
+                    "url": "https://start.duckduckgo.com"
+                },
+                {
+                    "name": "Google Keep",
+                    "icon": "folder.png",
+                    "url": "https://keep.google.com"
+                },
+                {
+                    "name": "Google Images",
+                    "icon": "folder.png",
+                    "url": "https://images.google.com"
+                }
+            ]
+        },
+        {
+            "name": "Social",
+            "icon": "globe.png",
+            "links": [
+                {
+                    "name": "Messenger ",
+                    "icon": "folder.png",
+                    "url": "https://messenger.com"
+                },
+                {
+                    "name": "Facebook ",
+                    "icon": "folder.png",
+                    "url": "https://facebook.com"
+                },
+                {
+                    "name": "Twitter ",
+                    "icon": "folder.png",
+                    "url": "https://twitter.com"
+                }
+            ]
+        },
+        {
+            "name": "Shopping",
+            "icon": "printer.png",
+            "links": [
+                {
+                    "name": "eBay ",
+                    "icon": "folder.png",
+                    "url": "https://ebay.com"
+                },
+                {
+                    "name": "Amazon ",
+                    "icon": "folder.png",
+                    "url": "https://smile.amazon.co.uk"
+                },
+                {
+                    "name": "Gumtree ",
+                    "icon": "folder.png",
+                    "url": "http://www.gumtree.com/dorset"
+                },
+                {
+                    "name": "Apple ",
+                    "icon": "folder.png",
+                    "url": "https://apple.co.uk"
+                }
+            ]
+        },
+        {
+            "name": "Entertainment ",
+            "icon": "screen.png",
+            "links": [
+                {
+                    "name": "YouTube ",
+                    "icon": "folder.png",
+                    "url": "https://www.youtube.com/feed/subscriptions"
+                },
+                {
+                    "name": "Netflix ",
+                    "icon": "folder.png",
+                    "url": "https://netflix.com"
+                }
+            ]
+        },
+        {
+            "name": "Development ",
+            "icon": "cogs.png",
+            "links": [
+                {
+                    "name": "JQuery Cheatsheet",
+                    "icon": "folder.png",
+                    "url": "https://oscarotero.com/jquery/"
+                },
+                {
+                    "name": "Self-Hosted Software",
+                    "icon": "folder.png",
+                    "url": "https://github.com/Kickball/awesome-selfhosted"
+                },
+                {
+                    "name": "MDN Web Docs",
+                    "icon": "folder.png",
+                    "url": "https://developer.mozilla.org/en-US/"
+                },
+                {
+                    "name": "HTML Colour Picker",
+                    "icon": "folder.png",
+                    "url": "https://www.w3schools.com/colors/colors_picker.asp"
+                }
+            ]
+        }
+    ]
+}

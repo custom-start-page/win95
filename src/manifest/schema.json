@@ -1,0 +1,79 @@
+{
+  "properties": {
+    "linkGroups": {
+      "type": "array",
+      "title": "Folders",
+      "description": "Create folders for the start menu",
+      "items": {
+        "type": "object",
+        "title": "Folder",
+        "required": [
+          "name",
+          "icon",
+          "links"
+        ],
+        "properties": {
+          "name": {
+              "type": "string",
+              "title": "Folder name",
+              "description": "Give the folder a name"
+          },
+          "icon": {
+              "type": "string",
+              "title": "Icon",
+              "description": "Select an icon for the folder",
+              "enum": [
+                  "book.png",
+                  "cogs.png",
+                  "desk.png",
+                  "folder.png",
+                  "globe.png",
+                  "printer.png",
+                  "screen.png"
+              ]
+          },
+          "links": {
+            "type": "array",
+            "title": "Links",
+            "items": {
+              "type": "object",
+              "title": "Link",
+              "description": "A single link to a website which belongs in the parent folder",
+              "required": [
+                "name",
+                "icon",
+                "url"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Name",
+                  "description": "Name of the website you're linking to"
+                },
+                "icon": {
+                    "type": "string",
+                    "title": "Icon",
+                    "description": "Select an icon for the folder",
+                    "enum": [
+                        "book.png",
+                        "cogs.png",
+                        "desk.png",
+                        "folder.png",
+                        "globe.png",
+                        "printer.png",
+                        "screen.png"
+                    ]
+                },
+                "url": {
+                  "type": "string",
+                  "title": "URL",
+                  "description": "Link with 'http://' to the website"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

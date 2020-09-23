@@ -6,18 +6,11 @@ $(document).ready(function(){
     // Var to hold currently shown folder, empty if none shown
     var currentFolder = "";
 
-    // Generate an array of folder names for use in populating the menu
-    var folderNames = Object.keys(menuFolders);
-
-    for(var i = 0; i < folderNames.length; i++) {
-
-        var folderName = folderNames[i];
-
-        // Append the folder to the start menu div html.
-        $("#rightPane").append(generateMenuFolderHTML(folderName, menuFolders[folderName]["icon"]))
-
+    function setupFolders(data) {
+        for (let linkGroup of data.linkGroups) {
+            $("#rightPane").append(generateMenuFolderHTML(linkGroup.name, linkGroup.icon))
+        }
     }
-
 
     // Generate the necessary HTML for a folder in the start menu.
     function generateMenuFolderHTML(name, pathToIcon) {
@@ -45,44 +38,22 @@ $(document).ready(function(){
     }
 
     // Function to populate sub folder with items from given folder
-    function populateSubFolder(folderName) {
-
+    function populateSubFolder(data, folderIndex, folderName) {
         // Clear the sub folder div ready for new items.
         $("#linkFolder").html("");
 
-        // Get the object for the folder.
-        var folderObject = menuFolders[folderName]["sites"];
+        let linkGroup = data.linkGroups
+            .find(x => x.name == folderName);
 
-        // Store the names of individual items in a list
-        var itemNames = Object.keys(menuFolders[folderName]["sites"]);
-
-        for(var i = 0; i < itemNames.length; i++) {
-
-            var itemName = itemNames[i];
-
+        for (let link of linkGroup.links) {
             // Append items to the pane;
-            $("#linkFolder").append(generateSubFolderHTML(itemName, folderObject[itemName]["icon"], folderObject[itemName]["url"]));
-
-        }
-
-        // Generate an array of folder names for finding the index of the current folder
-        var folderNames = Object.keys(menuFolders);
-
-        var folderIndex = 0;
-
-        // Find the index
-        for(var i = 0; i < folderNames.length; i++) {
-          if(folderNames[i] == folderName) {
-            folderIndex = i;
-            break;
-          }
+            $("#linkFolder").append(generateSubFolderHTML(link.name, link.icon, link.url));
         }
 
         setLinkFolderPosition(folderIndex);
 
         // Show the sub folder.
         $("#linkFolder").css("visibility", "visible");
-
     }
 
     // Detect that the start button has been clicked
@@ -116,21 +87,6 @@ $(document).ready(function(){
     function removeStartFolderStyles() {
         $("#rightPane > div").removeClass("selected");
     }
-
-    // Event for mouse entering a start menu folder
-    $(".startFolder").mouseenter(function(event) {
-
-        removeStartFolderStyles();
-
-        // Style the div to look selected.
-        $(this).addClass("selected");
-
-        // Set the current folder from the folderNames list based on the index in the parent.
-        currentFolder = folderNames[$(this).index()];
-
-        populateSubFolder(currentFolder);
-
-    });
 
     // Detect a click anywhere in page
     $(document).click(function(e) {
@@ -174,4 +130,23 @@ $(document).ready(function(){
     // Run the time update initially
     displayTime();
 
+    new CustomStartStorage().get()
+        .then(data => {
+            setupFolders(data);
+
+            // Event for mouse entering a start menu folder
+            $(".startFolder").mouseenter(function(event) {
+
+                removeStartFolderStyles();
+
+                // Style the div to look selected.
+                $(this).addClass("selected");
+
+                var folderIndex = $(this).index();
+
+                currentFolder = $(this).find('.folderName').html();
+
+                populateSubFolder(data, folderIndex, currentFolder);
+            });
+        });
 });
