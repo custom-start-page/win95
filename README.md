@@ -1,6 +1,6 @@
 https://github.com/custom-start-page/win95
 
-# Template
+# Win95
 
 A simple start page designed to emulate the look and feel of Windows 95.
 
