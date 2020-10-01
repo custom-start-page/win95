@@ -9,6 +9,7 @@
     "preview": "preview.png",
     "features": [
         "links",
-        "clock"
+        "clock",
+        "background"
     ]
 }

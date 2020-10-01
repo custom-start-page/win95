@@ -1,5 +1,15 @@
 {
   "properties": {
+    "backgroundColor": {
+      "type": "string",
+      "title": "Background color",
+      "description": "Color of the desktop, could be a hex string, rgb value or HTML color name"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "title": "Background image",
+      "description": "Desktop wallpaper image URL, if you want to set one"
+    },
     "linkGroups": {
       "type": "array",
       "title": "Folders",

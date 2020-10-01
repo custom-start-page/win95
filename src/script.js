@@ -130,9 +130,22 @@ $(document).ready(function(){
     // Run the time update initially
     displayTime();
 
+    function setupBackgroundColor(data) {
+        $('body').css('background-color', data.backgroundColor);
+    };
+
+    function setupBackgroundImage(data) {
+        if (data.backgroundImage == null || data.backgroundImage == '')
+            return;
+
+        $('body').css('background-image', `url("${data.backgroundImage}")`);
+    }
+
     new CustomStartStorage().get()
         .then(data => {
             setupFolders(data);
+            setupBackgroundColor(data);
+            setupBackgroundImage(data);
 
             // Event for mouse entering a start menu folder
             $(".startFolder").mouseenter(function(event) {
