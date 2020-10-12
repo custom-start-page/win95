@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     // Generate the necessary HTML for a sub-folder in the start menu.
     function generateSubFolderHTML(name, pathToIcon, url) {
-        return `<a class="subFolderLink" href="`+ url +`" target=_blank>
+        return `<a class="subFolderLink" href="`+ url +`">
                 <div class="startSubFolder">
 
                   <img class="subFolderImg" src="res/` + pathToIcon + `">
