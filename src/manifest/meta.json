@@ -1,12 +1,10 @@
 {
-    "version": "1.0.1",
+    "version": "2.0.0",
     "name": "Win95",
-    "slug": "win95",
     "author": {
         "name": "Robert Petrie",
         "link": "https://gitlab.com/robpetrie/win95-startpage"
     },
-    "preview": "preview.png",
     "features": [
         "links",
         "clock",
